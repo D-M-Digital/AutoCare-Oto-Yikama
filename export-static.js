@@ -22,7 +22,7 @@ const pages = [
 ];
 
 pages.forEach(({ path, file, title }) => {
-  let html = indexHtml.replace('<title>Lovable App</title>', `<title>${title}</title>`);
+  let html = indexHtml.replace('<title>AutoCare</title>', `<title>${title}</title>`);
   
   html = html.replace(/\/assets\//g, './assets/');
   
