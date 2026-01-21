@@ -62,6 +62,35 @@ This project is built with:
 
 ## How can I deploy this project?
 
+### Deploy to GitHub Pages
+
+This project is configured to automatically deploy to GitHub Pages using GitHub Actions.
+
+**Setup Instructions:**
+
+1. **Enable GitHub Pages in your repository:**
+   - Go to your repository on GitHub
+   - Navigate to **Settings** → **Pages**
+   - Under **Source**, select **GitHub Actions** (not "Deploy from a branch")
+   - Save the settings
+
+2. **Push your code:**
+   - The GitHub Actions workflow (`.github/workflows/deploy.yml`) will automatically:
+     - Build your project when you push to `main` or `master` branch
+     - Deploy it to GitHub Pages
+   - After the workflow completes, your site will be available at:
+     - `https://YOUR_USERNAME.github.io/REPOSITORY_NAME/` (if repository name is not `username.github.io`)
+     - `https://YOUR_USERNAME.github.io/` (if repository name is `username.github.io`)
+
+3. **If your repository name is NOT `username.github.io`:**
+   - You may need to update the `base` path in `vite.config.ts`
+   - Uncomment and set: `base: '/YOUR_REPOSITORY_NAME/'`
+
+**Manual Deployment:**
+- You can also manually trigger deployment by going to **Actions** tab → **Deploy to GitHub Pages** → **Run workflow**
+
+### Deploy via Lovable
+
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
