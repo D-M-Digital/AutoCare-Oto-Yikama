@@ -84,7 +84,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm text-white/50">
-          <p>© 2024 AutoCare Oto Yıkama. Tüm hakları saklıdır.</p>
+          <p>© {new Date().getFullYear()} AutoCare Oto Yıkama. Tüm hakları saklıdır.</p>
         </div>
       </div>
     </footer>
